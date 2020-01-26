@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Display from '../components/Display';
 
 class Calculator extends Component {
     state = {
@@ -27,8 +28,12 @@ class Calculator extends Component {
     }
   
     render = () => {
+
+      const {displayValue} = this.state;
       return (
-        <div className="calculator-container" />
+        <div className="calculator-container" >
+        <Display displayValue={displayValue} />
+        </div>
       );
     }
   }
